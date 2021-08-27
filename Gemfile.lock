@@ -249,7 +249,7 @@ DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
   better_errors
   bootsnap (>= 1.4.4)
-  bootstrap (~> 4.6)
+  bootstrap (~> 4.6.0)
   byebug
   capybara (>= 3.26)
   devise
