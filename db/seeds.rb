@@ -53,5 +53,20 @@ allo2 = Allotment.create({
 allo1.save 
 allo2.save 
 
+offer1 = Offer.new({ 
+  coupon: "oferta",
+  total: "100",
+  status: "true",
+  allotment_id: allo1.id
+})
+
+offer1.save
+
+purch1 = Purchase.new({ 
+  user_id: user2.id,
+  offer_id: offer1.id
+})
+
+purch1.save
 
 puts 'Fin!'
