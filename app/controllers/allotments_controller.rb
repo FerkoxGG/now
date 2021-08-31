@@ -1,8 +1,9 @@
 class AllotmentsController < ApplicationController
-  def index 
+  def index
     @allotments = Allotment.all
   end
 
-  def show 
+  def show
+
   end
 end
