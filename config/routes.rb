@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :allotments, only: [:index, :show] do
     resources :offers, only: [:create, :update]
   end
-  resources :offers, only: [:show]
+  resources :offers, only: [:show] do
+    resources :purchases, only: [:create]
+  end
 end
