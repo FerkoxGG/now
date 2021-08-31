@@ -4,6 +4,5 @@ class AllotmentsController < ApplicationController
   end
 
   def show 
-
   end
 end
