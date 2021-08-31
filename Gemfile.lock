@@ -129,6 +129,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.12.3-x86_64-linux)
       racc (~> 1.4)
+    optimist (3.0.1)
     orm_adapter (0.5.0)
     pg (1.2.3)
     popper_js (1.16.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  optimist (~> 3.0, >= 3.0.1)
   pg (~> 1.1)
   pry-byebug
   pry-rails
@@ -271,7 +273,11 @@ DEPENDENCIES
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
+<<<<<<< HEAD
   webpacker (~> 5.4.0)
+=======
+  webpacker (~> 5.4)
+>>>>>>> 3642a6d3ee2d184fe58c4fdbe0ebfe61adb8f8c8
 
 RUBY VERSION
    ruby 2.6.6p146
