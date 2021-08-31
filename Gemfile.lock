@@ -125,9 +125,7 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
-    nokogiri (1.12.3-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.12.3-x86_64-linux)
+    nokogiri (1.12.4-x86_64-linux)
       racc (~> 1.4)
     optimist (3.0.1)
     orm_adapter (0.5.0)
@@ -146,7 +144,7 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-mini-profiler (2.3.2)
+    rack-mini-profiler (2.3.3)
       rack (>= 1.2.0)
     rack-proxy (0.7.0)
       rack
@@ -243,7 +241,6 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-darwin-18
   x86_64-linux
 
 DEPENDENCIES
@@ -273,11 +270,7 @@ DEPENDENCIES
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
-<<<<<<< HEAD
-  webpacker (~> 5.4.0)
-=======
   webpacker (~> 5.4)
->>>>>>> 3642a6d3ee2d184fe58c4fdbe0ebfe61adb8f8c8
 
 RUBY VERSION
    ruby 2.6.6p146
