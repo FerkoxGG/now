@@ -105,7 +105,7 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
-    faker (2.18.0)
+    faker (2.19.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.3)
     font-awesome-sass (5.15.1)
@@ -130,11 +130,6 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
-<<<<<<< HEAD
-    nokogiri (1.12.4-x86_64-darwin)
-      racc (~> 1.4)
-=======
->>>>>>> cd6cd0e4a23fc4e94d73b2415e0336dd8f480455
     nokogiri (1.12.4-x86_64-linux)
       racc (~> 1.4)
     optimist (3.0.1)
