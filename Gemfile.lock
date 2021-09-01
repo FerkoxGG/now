@@ -105,7 +105,7 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
-    faker (2.18.0)
+    faker (2.19.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.3)
     font-awesome-sass (5.15.1)
@@ -130,8 +130,6 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
-    nokogiri (1.12.4-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.12.4-x86_64-linux)
       racc (~> 1.4)
     optimist (3.0.1)
@@ -248,7 +246,6 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-darwin-18
   x86_64-linux
 
 DEPENDENCIES
@@ -286,4 +283,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.26
+   2.2.19
