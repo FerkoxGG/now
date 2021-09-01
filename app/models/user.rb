@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :allotments, dependent: :destroy
   has_many :purchases, dependent: :destroy
+
+  accepts_nested_attributes_for :allotments
 end
