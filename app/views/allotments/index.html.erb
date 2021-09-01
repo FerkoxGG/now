@@ -1,18 +1,20 @@
-<h1>Proyect New</h1>
-<p></p>
+<div class="container">
+  <h1>Proyect New</h1>
+  <p></p>
 
-<ul class="list-inline">
-  <%  @allotments.each do |allotment| %>
-    <li class="list-group-item">
-      <div class="d-flex justify-content-between py-1" style="width: 300px;">
+  <ul class="list-inline">
+    <%  @allotments.each do |allotment| %>
+      <li class="list-group-item">
+        <div class="d-flex justify-content-between py-1" style="width: 300px;">
+          <div class="d-inline">
+        <%= link_to allotment.name, allotment_path(allotment) %> 
+        </div>
         <div class="d-inline">
-      <%= link_to allotment.name, allotment_path(allotment) %> 
-      </div>
-      <div class="d-inline">
-      <!-- %= # link_to "📝", edit_allotment_path(allotment), title: 'Edit this allotment' % --> 
-      <!-- %= # link_to "🗑️", allotment_path(allotment), title: 'Delete this allotment', method: :delete, data: { confirm: "Esta seguro?"} % -->
-      </div>
-      </div>
-      </li>
-  <% end %>
+        <!-- %= # link_to "📝", edit_allotment_path(allotment), title: 'Edit this allotment' % --> 
+        <!-- %= # link_to "🗑️", allotment_path(allotment), title: 'Delete this allotment', method: :delete, data: { confirm: "Esta seguro?"} % -->
+        </div>
+        </div>
+        </li>
+    <% end %>
 </ul>
+</div>
