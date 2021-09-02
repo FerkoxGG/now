@@ -3,5 +3,8 @@
 <%= @allotment.total %>
 
 <li> Lista de ofertas
-    <%= @allotment.offers %>
+    <% @allotment.offers.where(status: "active").each do |offer| %>
+        <h1><%= offer.coupon %></h1>
+        <%= link_to "Generar Cupón", offer_purchases_path(offer), method: :post %>
+    <%end %>
 </li>
