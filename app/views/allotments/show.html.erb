@@ -11,6 +11,14 @@
 <%= @allotment.total %>
 
 <li> Lista de ofertas
+<<<<<<< HEAD
     <%= @allotment.offers %>
 </li>
 >>>>>>> b02c59af7ea5b9067d684c452841f897ce1165b9
+=======
+    <% @allotment.offers.where(status: "active").each do |offer| %>
+        <h1><%= offer.coupon %></h1>
+        <%= link_to "Generar Cupón", offer_purchases_path(offer), method: :post %>
+    <%end %>
+</li>
+>>>>>>> 99f11c4b4e5aa28220858c58bbdc32376a8cb592
