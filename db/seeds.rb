@@ -56,7 +56,7 @@ allo2.save
 offer1 = Offer.new({ 
   coupon: "oferta",
   total: "100",
-  status: "true",
+  status: "active",
   allotment_id: allo1.id
 })
 
