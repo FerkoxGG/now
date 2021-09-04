@@ -1,3 +1,10 @@
 <h1> Producto : <%= @allotment.name %> </h1>
 <%= @allotment.expire_date %>
 <%= @allotment.total %>
+
+<li> Lista de ofertas
+    <% @allotment.offers.where(status: "active").each do |offer| %>
+        <h1><%= offer.coupon %></h1>
+        <%= link_to "Generar Cupón", offer_purchases_path(offer), method: :post %>
+    <%end %>
+</li>

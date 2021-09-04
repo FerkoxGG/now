@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
   def show
-    @offer = Allotment.all
+    @offer = Offer.all
   end
 end

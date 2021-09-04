@@ -1,18 +1,22 @@
-<h1>Proyect New</h1>
-<p></p>
-
-<ul class="list-inline">
-  <%  @allotments.each do |allotment| %>
-    <li class="list-group-item">
-      <div class="d-flex justify-content-between py-1" style="width: 300px;">
-        <div class="d-inline">
-      <%= link_to allotment.name, allotment_path(allotment) %> 
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-black">
+    <h1>Proyect Now</h1>
+    <h3 class="typed-js"></h3>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Lotes de productos</h3>
+  </div>
+  <div class="row">
+    <% @allotments.each do |allotment| %>
+      <div class="co-12 colsm-6 col-md-4 mb-3">
+        <%= link_to allotment_path(allotment), class:'text-decoration-none' do %>
+          <div class="card-category" data-aos="zoom-in" style="background: #000">
+            <%= allotment.name %>
+          </div>
+        <% end %>
       </div>
-      <div class="d-inline">
-      <!-- %= # link_to "📝", edit_allotment_path(allotment), title: 'Edit this allotment' % --> 
-      <!-- %= # link_to "🗑️", allotment_path(allotment), title: 'Delete this allotment', method: :delete, data: { confirm: "Esta seguro?"} % -->
-      </div>
-      </div>
-      </li>
-  <% end %>
-</ul>
+    <% end %>
+  </div>
+</div>
