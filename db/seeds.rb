@@ -40,17 +40,71 @@ puts 'Creating 10 user records for database...'
   allotments_attributes: [
     {
       name: Faker::Dessert.variety,
-      total: (1..10).to_a.sample
+      total: (1..10).to_a.sample,
+      offers_attributes: [
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+        }
+      ]
     },
     {
       name: Faker::Dessert.variety,
-      total: (1..10).to_a.sample
+      total: (1..10).to_a.sample,
+      offers_attributes: [
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+        }
+      ]
     }
   ]
   )
-  puts "User #{user.id} #{user.email} created!"
-  puts "Allotment #{user.allotments[0].name} created!"
-  puts "Allotment #{user.allotments[1].name} created!"
 end
+puts "#{User.all.count} users created!"
+puts "#{Allotment.all.count} allotments created!"
+puts "#{Offer.all.count} offers created!"
+
+# Allotment.all.count.times do
+#   offers_attributes: [
+#     {
+#       coupon: (1234..1345).to_a.sample,
+#       total:  (1200..2000).to_a.sample,
+#       status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+#     },
+#     {
+#       coupon: (1234..1345).to_a.sample,
+#       total:  (1200..2000).to_a.sample,
+#       status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+#     },
+#     {
+#       coupon: (1234..1345).to_a.sample,
+#       total:  (1200..2000).to_a.sample,
+#       status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+#     }
+#   ]
+# end
 
 puts "Done!"
