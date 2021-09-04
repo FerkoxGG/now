@@ -2,10 +2,16 @@
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
   <div class="card-trip-infos">
     <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
-    </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
+      <h2> Oferta </h2>
+      <ul>
+        <li> Cupon ID: <%= @offer.coupon%> </li>
+        <li> Estado: <%= @offer.status %> </li>
+        
+        </ul>
+      </div>
+    <h2 class="card-trip-pricing"><%= @offer.total %> CLP </h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
 </div>
+
+
