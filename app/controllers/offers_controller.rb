@@ -1,5 +1,8 @@
 class OffersController < ApplicationController
   before_action :find_offer, except: [ :index, :new, :create ]
+  def index
+    @offers = Offer.all
+  end
 
   def show
     @offers = Offer.new
