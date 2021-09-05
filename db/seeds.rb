@@ -24,6 +24,55 @@ user = User.create!(
   )
 puts "Done with the default user"
 
+<<<<<<< HEAD
+puts 'Creating seeds...'
+user1 = User.new({
+  email:  "car@li.tos",
+  password:  "1232345",
+  first_name: "carl",
+  last_name:  "itos"
+  })
+user1.save
+  
+user2 = User.new({
+    email:  "jor@gi.to",
+    password:  "1232345",
+    first_name: "jor",
+    last_name:  "gito"
+    })
+user2.save
+      
+
+allo1 = Allotment.new({
+  name: "Yogures",
+  total: "110",
+  user_id: user1.id
+})
+
+allo2 = Allotment.create({
+  name: "mantequilla",
+  total: "150",
+  user_id: user2.id
+})
+
+allo1.save 
+allo2.save 
+
+offer1 = Offer.new({ 
+  coupon: "oferta",
+  total: "100",
+  status: "active",
+  allotment_id: allo1.id
+})
+
+offer1.save
+
+purch1 = Purchase.new({ 
+  user_id: user2.id,
+  offer_id: offer1.id
+})
+=======
+>>>>>>> 9405702f40a5e3e2f53eed88a115257d4175f717
 
 puts 'Creating 10 user records for database...'
 10.times do
