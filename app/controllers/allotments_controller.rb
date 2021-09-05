@@ -4,7 +4,16 @@ class AllotmentsController < ApplicationController
 
   def index
     @category = find_category
-    @category.nil? ? @allotments = Allotment.all : @allotments = Allotment.by_category(@category)
+    @categories = Allotment.select(:category).distinct.pluck(:category)
+    @categories = @categories.compact
+    case @category
+    when nil
+      @allotments = Allotment.all
+    when *@categories
+      @allotments = Allotment.by_category(@category)
+    else
+      redirect_to allotments_path
+    end
   end
 
   def show
