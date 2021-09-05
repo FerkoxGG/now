@@ -37,42 +37,44 @@ puts 'Creating 10 user records for database...'
     {
       name: Faker::Dessert.variety,
       total: (1..10).to_a.sample,
+      category: ["lacteos", "legumbres", "limpieza"].sample,
       offers_attributes: [
         {
           coupon: (1234..1345).to_a.sample,
           total:  (1200..2000).to_a.sample,
-          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
         },
         {
           coupon: (1234..1345).to_a.sample,
           total:  (1200..2000).to_a.sample,
-          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
         },
         {
           coupon: (1234..1345).to_a.sample,
           total:  (1200..2000).to_a.sample,
-          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
         }
       ]
     },
     {
       name: Faker::Dessert.variety,
       total: (1..10).to_a.sample,
+      category: ["lacteos", "legumbres", "limpieza"].sample,
       offers_attributes: [
         {
           coupon: (1234..1345).to_a.sample,
           total:  (1200..2000).to_a.sample,
-          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
         },
         {
           coupon: (1234..1345).to_a.sample,
           total:  (1200..2000).to_a.sample,
-          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
         },
         {
           coupon: (1234..1345).to_a.sample,
           total:  (1200..2000).to_a.sample,
-          status: ["Disponible","Agotado","En stock","En gondola","En transporte"].sample
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
         }
       ]
     }

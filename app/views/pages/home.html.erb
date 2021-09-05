@@ -7,22 +7,20 @@
   </div>
   <br />
 <div class="container">
-    <div class="cards">
+    <div class="cards" >
+    <% @categories.each do |category| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to category, allotments_path(:category => category)  %>
+      </div>
+    <% end %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        Lacteos
-      </div>
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-        Legumbres
-      </div>
-
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-        Limpieza
+        <%= link_to 'Todas las categorias', allotments_path  %>
       </div>
 </div>
+</div>
+<br/>
+<br/>
 
-<br/>
-<br/>
 
 
 <div class="row">
