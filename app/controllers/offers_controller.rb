@@ -5,6 +5,7 @@ class OffersController < ApplicationController
   end
 
   def show
+    @allotment = Allotment.find(params[:allotment_id])
     @offers = Offer.new
   end
 
