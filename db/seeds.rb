@@ -1,25 +1,30 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# 
 User.destroy_all
 Allotment.destroy_all
 
+puts "Database records wiped clean!"
 
+puts "Creating the default user mauro@email.com..."
+user = User.create!(
+  email: "usuario@email.com",
+  # password:  Faker::Internet.password,
+  password:  "password",
+  first_name: "usu",
+  last_name:  "ario",
+  allotments_attributes: [
+    {
+      name: "cheese",
+      total: (1..10).to_a.sample
+    },
+    {
+      name: "peanut butter",
+      total: (1..10).to_a.sample
+    }  
+  ]
+  )
+puts "Done with the default user"
 
+<<<<<<< HEAD
 puts 'Creating seeds...'
 user1 = User.new({
   email:  "car@li.tos",
@@ -56,7 +61,7 @@ allo2.save
 offer1 = Offer.new({ 
   coupon: "oferta",
   total: "100",
-  status: "true",
+  status: "active",
   allotment_id: allo1.id
 })
 
@@ -66,7 +71,67 @@ purch1 = Purchase.new({
   user_id: user2.id,
   offer_id: offer1.id
 })
+=======
+>>>>>>> 9405702f40a5e3e2f53eed88a115257d4175f717
 
-purch1.save
+puts 'Creating 10 user records for database...'
+10.times do
+  user = User.create!(
+  email:  Faker::Internet.email,
+  # password:  Faker::Internet.password,
+  password:  "123456",
+  first_name: Faker::Name.first_name,
+  last_name:  Faker::Name.last_name,
+  allotments_attributes: [
+    {
+      name: Faker::Dessert.variety,
+      total: (1..10).to_a.sample,
+      category: ["lacteos", "legumbres", "limpieza"].sample,
+      offers_attributes: [
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
+        }
+      ]
+    },
+    {
+      name: Faker::Dessert.variety,
+      total: (1..10).to_a.sample,
+      category: ["lacteos", "legumbres", "limpieza"].sample,
+      offers_attributes: [
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
+        },
+        {
+          coupon: (1234..1345).to_a.sample,
+          total:  (1200..2000).to_a.sample,
+          status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
+        }
+      ]
+    }
+  ]
+  )
+end
+puts "#{User.all.count} users created!"
+puts "#{Allotment.all.count} allotments created!"
+puts "#{Offer.all.count} offers created!"
 
-puts 'Fin!'
+puts "Done!"

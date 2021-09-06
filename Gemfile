@@ -35,6 +35,7 @@ gem 'better_errors'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'has_scope'
 
 group :development, :test do
   gem 'pry-byebug'
