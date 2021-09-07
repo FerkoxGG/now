@@ -24,7 +24,6 @@ user = User.create!(
   )
 puts "Done with the default user"
 
-<<<<<<< HEAD
 puts 'Creating seeds...'
 user1 = User.new({
   email:  "car@li.tos",
@@ -47,6 +46,7 @@ allo1 = Allotment.new({
   name: "Yogures",
   total: "110",
   user_id: user1.id
+  
 })
 
 allo2 = Allotment.create({
@@ -71,8 +71,6 @@ purch1 = Purchase.new({
   user_id: user2.id,
   offer_id: offer1.id
 })
-=======
->>>>>>> 9405702f40a5e3e2f53eed88a115257d4175f717
 
 puts 'Creating 10 user records for database...'
 10.times do
