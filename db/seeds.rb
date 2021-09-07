@@ -46,6 +46,7 @@ allo1 = Allotment.new({
   name: "Yogures",
   total: "110",
   user_id: user1.id
+  
 })
 
 allo2 = Allotment.new({
