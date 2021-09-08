@@ -24,7 +24,7 @@ class AllotmentsController < ApplicationController
 private
 
   def allotment_params
-    params.require(:allotment).permit(:name, :total, :expire_date, :user_id, :redeemed_number, :category)
+    params.require(:allotment).permit(:name, :total, :expire_date, :user_id, :redeemed_number, :category, :image_url)
   end
 
   def find_allotment
