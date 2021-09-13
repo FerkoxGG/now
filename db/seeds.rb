@@ -1,3 +1,4 @@
+require 'open-uri'
 # 
 User.destroy_all
 Allotment.destroy_all
@@ -22,6 +23,7 @@ user = User.create!(
     }  
   ]
   )
+user.save
 puts "Done with the default user"
 
 puts 'Creating seeds...'
@@ -45,17 +47,19 @@ user2.save
 allo1 = Allotment.new({
   name: "Yogures",
   total: "110",
-  user_id: user1.id
+  user_id: user1.id, 
+  image_url: "https://images.unsplash.com/photo-1564149503905-7fef56abc1f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
   
 })
 
-allo2 = Allotment.create({
+allo2 = Allotment.new({
   name: "mantequilla",
   total: "150",
-  user_id: user2.id
+  user_id: user2.id,
+  image_url: URI.open("https://images.unsplash.com/photo-1564149503905-7fef56abc1f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
 })
 
-allo1.save 
+allo1.save!
 allo2.save 
 
 offer1 = Offer.new({ 
@@ -71,6 +75,8 @@ purch1 = Purchase.new({
   user_id: user2.id,
   offer_id: offer1.id
 })
+
+purch1.save
 
 puts 'Creating 10 user records for database...'
 10.times do
