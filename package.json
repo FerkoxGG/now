@@ -16,6 +16,11 @@
     "npm": "7.23.0",
     "turbolinks": "^5.2.0"
   },
+  "resolve": {
+    "fallback": {
+      "fs": false
+    }
+  },
   "version": "0.1.0",
   "devDependencies": {
     "webpack": "^5.52.1",
