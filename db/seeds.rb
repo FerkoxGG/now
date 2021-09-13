@@ -5,7 +5,8 @@ Allotment.destroy_all
 
 puts "Database records wiped clean!"
 
-puts "Creating the default user mauro@email.com..."
+puts "Creating the default user usuario@email.com"
+puts "... with password 'password'"
 user = User.create!(
   email: "usuario@email.com",
   # password:  Faker::Internet.password,
