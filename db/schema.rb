@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_08_200139) do
+ActiveRecord::Schema.define(version: 2021_09_13_223136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 2021_09_08_200139) do
     t.string "image_url"
     t.index ["category"], name: "index_allotments_on_category"
     t.index ["user_id"], name: "index_allotments_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "user"
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.text "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "offers", force: :cascade do |t|
