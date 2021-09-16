@@ -16,11 +16,7 @@
     <% @allotments.each do |allotment| %>
       <div class="co-12 colsm-6 col-md-4 mb-3">
         <%= link_to allotment_path(allotment), class:'text-decoration-none' do %>
-<<<<<<< HEAD
           <div class="card-category" data-aos="zoom-in" style="background: #EE6D5B">
-=======
-          <div class="card-category" data-aos="zoom-in">
->>>>>>> 6e8823035474bea3d57b3ca8135c8965c6e3a172
             <%= allotment.name %>
             <% if allotment.image_url.nil? %>
                 <%= image_tag ("https://images.unsplash.com/photo-1534531304203-b830551771b9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDB8fHNrYXRlYm9hcmR8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60") %>
