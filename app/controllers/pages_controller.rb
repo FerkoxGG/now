@@ -9,6 +9,4 @@ class PagesController < ApplicationController
   def associations
   end
 
-  def foundations
-  end
 end
