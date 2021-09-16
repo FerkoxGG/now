@@ -18,4 +18,20 @@
     width: 150px;
 }
 
+.navbar-lewagon-link {
+    display: flex;
+    justify-content: center;
+}
+.navbar-lewagon-link li {
+    text-decoration: none;
+}
+
+.navbar-lewagon-link a {
+    color: orange;
+    font-weight: 500;
+}
+
+.navbar-lewagon-link.dropdown li {
+    text-decoration: none;
+}
 
