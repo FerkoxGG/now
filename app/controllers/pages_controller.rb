@@ -5,4 +5,8 @@ class PagesController < ApplicationController
     @categories = Allotment.select(:category).distinct.pluck(:category)
     @categories = @categories.compact
   end
+
+  def associations
+  end
+
 end
