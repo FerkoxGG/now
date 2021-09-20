@@ -20,15 +20,15 @@
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Log in", class: 'btn-primary' %>
+    <div class="form-actions d-flex ">
+      <%= f.button :submit, "Log in", class: 'btn-primary mx-2' %>
+       <%= render "devise/shared/links" %>
     </div>
     </div>
   <% end %>
+  
   <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-  <p>or</p>
-<% end %>
-  <%= render "devise/shared/links" %>
-<p></p>
+    <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+  <% end %>
+
 </div>

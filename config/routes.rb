@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'messages/new'
-  get 'messages/create'
-  root to: 'pages#home'
+root to: 'pages#home'
   get '/thanks', to: 'pages#thanks'
+  get '/associations', to: 'pages#associations'
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   devise_for :users
   resources :allotments, only: [:index, :show] do

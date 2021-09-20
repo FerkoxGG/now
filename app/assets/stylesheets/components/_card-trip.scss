@@ -1,7 +1,8 @@
 .card-trip {
     overflow: hidden;
+    padding: 60px;
     background: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
 }
 
 .card-trip>img {
@@ -23,19 +24,13 @@
 }
 
 .card-trip .card-trip-infos {
-    padding: 16px;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-    position: absolute;
-    right: 16px;
-    top: -20px;
-    width: 40px;
-}
 
 .card-trip-title {
     text-align: center;
