@@ -1,34 +1,32 @@
-<div class="container placeholder col-6 w-75">
-  <h2>Iniciar sesión en Now!</h2>
+<br />
+  <div class="container placeholder col-6 w-75">
+    <h2>Iniciar sesión en Now!</h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<div class="form-group">
-    <div class="form-inputs">
-      <%= f.input :email,
-                  placeholder: 'usuario@email.com',
-                  required: false,
-                  label: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" },
-                  class: 'form-control' %>
-      <%= f.input :password,
-                  required: false,
-                  placeholder: '******',
-                  label: false,
-                  input_html: { autocomplete: "current-password" },
-                  class: 'form-control' %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group">
+        <div class="form-inputs">
+          <%= f.input :email,
+                      placeholder: 'usuario@email.com',
+                      required: false,
+                      label: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" },
+                      class: 'form-control' %>
+          <%= f.input :password,
+                      required: false,
+                      placeholder: '******',
+                      label: false,
+                      input_html: { autocomplete: "current-password" },
+                      class: 'form-control' %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+        <div class="form-actions btn-group">
+          <%= f.button :submit, "Log in", class: 'btn-primary mx-2' %> <%= render "devise/shared/links" %>
+        </div>
     </div>
-
-    <div class="form-actions d-flex ">
-      <%= f.button :submit, "Log in", class: 'btn-primary mx-2' %>
-       <%= render "devise/shared/links" %>
-    </div>
-    </div>
-  <% end %>
-  
-  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-    <%= link_to "Forgot your password?", new_password_path(resource_name) %>
-  <% end %>
-
-</div>
+    <% end %>
+    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+      <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+    <% end %>
+  </div>
+<br />
