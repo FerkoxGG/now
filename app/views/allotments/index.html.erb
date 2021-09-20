@@ -11,16 +11,16 @@
     <h3 class="mb-0">Lotes de productos en categoria<%= @category %>'</h3>
     <% end %>
   </div>
-  <div class="row">
+  <div class="allotment-container">
     <% @allotments.each do |allotment| %>
-      <div class="co-12 colsm-6 col-md-4 mb-3">
+      <div class="">
         <%= link_to allotment_path(allotment), class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in" style="background: #EE6D5B">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= allotment.image_url %>)">
+      
             <%= allotment.name %>
             <% if allotment.image_url.nil? %>
-                <%= image_tag ("https://images.unsplash.com/photo-1534531304203-b830551771b9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDB8fHNrYXRlYm9hcmR8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60") %>
-              <% else %>
-                
+                <%= image_tag ("") %>
+                              
               <% end %>
 
           </div>
@@ -29,3 +29,9 @@
     <% end %>
   </div>
 </div>
+<style>.allotment-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+</style>
