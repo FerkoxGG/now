@@ -1,3 +1,4 @@
+# algo pasa que no guarda esta migra en el github grr grr grrr
 class CreateMessages < ActiveRecord::Migration[6.1]
   def change
     create_table :messages do |t|
