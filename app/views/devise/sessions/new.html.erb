@@ -20,9 +20,8 @@
                       class: 'form-control' %>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
-        <div class="form-actions btn-group">
-          <%= f.button :submit, "Log in", class: 'btn-primary mx-2' %> <%= render "devise/shared/links" %>
-        </div>
+        <%= f.button :submit, "Log in", class: 'form-actions btn btn-primary btn-lg btn-block' %>
+        <%= render "devise/shared/links", class:"btn btn-secondary btn-lg btn-block" %>
     </div>
     <% end %>
     <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
