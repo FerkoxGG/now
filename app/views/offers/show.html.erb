@@ -7,6 +7,12 @@
         <li> Cupon ID: <%= @offer.coupon%> </li>
         <li> Estado: <%= @offer.status %> </li>
         <li> Solicitar Cupon </li>
+
+   <% @allotment.offers.where(status: "active").each do |offer| %>
+        <h1><%= offer.coupon %></h1>
+        <%= link_to "Generar Cupón", offer_purchases_path(offer), method: :post %>
+    <% end %>
+
         <li> Comprar oferta </li>
         </ul>
       </div>
@@ -14,6 +20,4 @@
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
 </div>
-<br />
-
 
