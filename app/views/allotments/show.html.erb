@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 <div class="container">
   <h1> Producto : <%= @allotment.name %> </h1>
     <%= @allotment.expire_date %>
@@ -12,17 +9,14 @@
 <%= @allotment.total %>
 
 <li> Lista de ofertas
-<<<<<<< HEAD
     <%= @allotment.offers %>
 </li>
->>>>>>> b02c59af7ea5b9067d684c452841f897ce1165b9
 =======
     <% @allotment.offers.where(status: "active").each do |offer| %>
         <h1><%= offer.coupon %></h1>
         <%= link_to "Generar Cupón", offer_purchases_path(offer), method: :post %>
     <%end %>
 </li>
->>>>>>> 99f11c4b4e5aa28220858c58bbdc32376a8cb592
 =======
 <h1> Producto : <%= @allotment.name %> en <%= @allotment.category %> </h1>
 <p> Fecha de expiracion: <%= @allotment.expire_date %> </p>
@@ -34,4 +28,3 @@
         <%= link_to "Detalle de la oferta", allotment_offer_path(@allotment, offer) %>
     <%end %>
 
->>>>>>> 680622a4840eab15b576bc9d150beec271a83026
