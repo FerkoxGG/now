@@ -6,10 +6,12 @@
     align-items: center;
     padding: 0.5;
     margin-top: 30px;
+    border-radius: 20px;
     img {
         height: 456px; 
         width: 456px;
         object-fit: cover;
+        border-radius: 20px;
       }
       h2 {
         font-size: 14px;
