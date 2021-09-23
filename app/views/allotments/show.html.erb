@@ -1,13 +1,20 @@
+<br />
+
 <div class="container">
+  <div class="card-section">
+    <img src= "<%= (@allotment.image_url)%>"/>
+    <div class="card-section-infos">
+      <h3>Producto : <%= @allotment.name %> en <%= @allotment.category %></h3>
+      <p>Fecha de expiracion: <%= @allotment.expire_date %></p>
+      <p> Total: <%= @allotment.total %> </p>
+      <h1> Ofertas de <%= @allotment.name %></h1>
+      <p>Cupones</p>
+    </div>
+  </div>
+</div>  
 
-<h2> Producto : <%= @allotment.name %> en <%= @allotment.category %> </h2>
 
-
-<p> Fecha de expiracion: <%= @allotment.expire_date %> </p>
-<p> Total: <%= @allotment.total %> </p>
-
-<h3> Ofertas de <%= @allotment.name %></h3>
-        <p>Cupones </p>
+        
     <% @allotment.offers.each do |offer| %>
         <%= link_to offer.coupon, allotment_offer_path(@allotment, offer) %>
     <% end %>
