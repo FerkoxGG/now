@@ -20,8 +20,7 @@ class AllotmentsController < ApplicationController
     @allotments = Allotment.new
   end
 
-
-private
+  private
 
   def allotment_params
     params.require(:allotment).permit(:name, :total, :expire_date, :user_id, :redeemed_number, :category, :image_url)
