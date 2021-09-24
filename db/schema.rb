@@ -44,10 +44,9 @@ ActiveRecord::Schema.define(version: 2021_09_20_211756) do
   end
 
   create_table "allotments", force: :cascade do |t|
-    t.decimal "total"
     t.string "name"
     t.integer "redeemed_number"
-    t.date "expire_date"
+    t.string "expire_date"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -55,6 +54,15 @@ ActiveRecord::Schema.define(version: 2021_09_20_211756) do
     t.string "image_url"
     t.index ["category"], name: "index_allotments_on_category"
     t.index ["user_id"], name: "index_allotments_on_user_id"
+  end
+
+  create_table "coupons", force: :cascade do |t|
+    t.boolean "status"
+    t.string "item_name"
+    t.string "redeemed_number"
+    t.string "expire_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "messages", force: :cascade do |t|
@@ -68,37 +76,14 @@ ActiveRecord::Schema.define(version: 2021_09_20_211756) do
   end
 
   create_table "offers", force: :cascade do |t|
-    t.string "coupon"
     t.string "total"
     t.bigint "allotment_id", null: false
+    t.bigint "coupon_id", null: false
     t.string "status", default: "active"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["allotment_id"], name: "index_offers_on_allotment_id"
-  end
-
-  create_table "productcategories", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "items"
-    t.string "flags"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "brand"
-    t.string "description"
-    t.date "expiry_date"
-    t.integer "price"
-    t.integer "weight"
-    t.integer "cost"
-    t.integer "sku_id"
-    t.integer "taxable"
-    t.string "J"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.index ["coupon_id"], name: "index_offers_on_coupon_id"
   end
 
   create_table "purchases", force: :cascade do |t|
@@ -128,6 +113,7 @@ ActiveRecord::Schema.define(version: 2021_09_20_211756) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "allotments", "users"
   add_foreign_key "offers", "allotments"
+  add_foreign_key "offers", "coupons"
   add_foreign_key "purchases", "offers"
   add_foreign_key "purchases", "users"
 end

@@ -128,182 +128,164 @@ end
 
 
 user= User.first
-Allotment.create(total: 200, name: "Torta", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+Allotment.create(name: "Torta", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
 category: "panaderia",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: "active"
   }
 ])
 
-Allotment.create(total: 85, name: "Cup Cake", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+Allotment.create(name: "Cup Cake", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
 category: "panaderia",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: "active"
   }
 ]) 
 
-Allotment.create(total: 85, name: "Pan", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1497581175344-8a5f1a0142a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
+Allotment.create(name: "Pan", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1497581175344-8a5f1a0142a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
 category: "panaderia",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ]) 
 
-Allotment.create(total: 85, name: "Yogurth", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1571230389215-b34a89739ef1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
+Allotment.create(name: "Yogurth", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1571230389215-b34a89739ef1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
 category: "lacteos",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Hamburgueza", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+Allotment.create(name: "Hamburgueza", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
 category: "panaderia",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Jugo natural", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+Allotment.create(name: "Jugo natural", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
 category: "bebidas",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Mantequilla", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+Allotment.create(name: "Mantequilla", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
 category: "embutidos",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Paltas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1590431306482-f700ee050c59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+Allotment.create(name: "Paltas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1590431306482-f700ee050c59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
 category: "Frutas y verduras",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Naranjas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1585584114945-b807e46ccbd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+Allotment.create(name: "Naranjas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1585584114945-b807e46ccbd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
 category: "Frutas y verduras",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "platanos", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1543218024-57a70143c369?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80",
+Allotment.create(name: "platanos", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1543218024-57a70143c369?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80",
 category: "Frutas y verduras",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Uvas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1508162172419-c47fcdf7d2ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
+Allotment.create(name: "Uvas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1508162172419-c47fcdf7d2ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
 category: "Frutas y verduras",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Coca-cola", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1592892111425-15e04305f961?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
+Allotment.create(name: "Coca-cola", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1592892111425-15e04305f961?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
 category: "bebidas",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Sprite", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
+Allotment.create(name: "Sprite", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
 category: "bebidas",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Vino", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1577471486579-ea9de38e06fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=379&q=80",
+Allotment.create(name: "Vino", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1577471486579-ea9de38e06fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=379&q=80",
 category: "bebidas",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Cervezas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1603644197087-dbeeba73e106?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
+Allotment.create(name: "Cervezas", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1603644197087-dbeeba73e106?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
 category: "bebidas",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Maní", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1596503799872-5c5f052c27b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
+Allotment.create(name: "Maní", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1596503799872-5c5f052c27b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
 category: "Frutos secos",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Kiwi", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1610917040803-1fccf9623064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+Allotment.create(name: "Kiwi", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1610917040803-1fccf9623064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
 category: "Frutas y verduras",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
 
-Allotment.create(total: 85, name: "Agua mineral", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1603968070333-58761fa00853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=397&q=80",
+Allotment.create(name: "Agua mineral", redeemed_number: 15, expire_date: "15-10-21", user: user, image_url: "https://images.unsplash.com/photo-1603968070333-58761fa00853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=397&q=80",
 category: "bebidas",
 offers_attributes: [
   {
     coupon: (1200..1300).to_a.sample,
-    total:  (2200..2200).to_a.sample,
     status: ["Disponible","Agotado","En stock","En gondola","En transporte", "active"].sample
   }
 ])
