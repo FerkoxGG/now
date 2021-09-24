@@ -8,16 +8,18 @@
       <p>Fecha de expiracion: <%= @allotment.expire_date %></p>
       <p> Total: <%= @allotment.total %> </p>
       <h1> Ofertas de <%= @allotment.name %></h1>
-      <p>Cupones</p>
+      
+      <br />
+
+      <%= link_to "Cupones", image_url="https://res.cloudinary.com/dsmtchuwt/image/upload/v1632511174/Naranja_Verde_Tropical_Verano_de_Temporada_Cup%C3%B3n_btr5ps.jpg" , class: "btn btn-flat", target: "_blank" %>
+     
     </div>
   </div>
 </div>  
 
 
         
-    <% @allotment.offers.each do |offer| %>
-        <%= link_to offer.coupon, allotment_offer_path(@allotment, offer) %>
-    <% end %>
+    
 
     <% @allotment.offers.where(status: "active").each do |offer| %>
         <h1><%= offer.coupon %></h1>
