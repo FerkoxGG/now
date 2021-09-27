@@ -5,7 +5,7 @@
     <img src= "<%= (@allotment.image_url)%>"/>
     <div class="card-section-infos">
       <h3>Producto : <%= @allotment.name %> en <%= @allotment.category %></h3>
-      <p>Fecha de expiracion: <%= @allotment.expire_date %></p>
+      <p>Fecha de expiracion: 29/09/2021</p>
       <p> Total: <%= @allotment.total %> </p>
       <h1> Ofertas de <%= @allotment.name %></h1>
       
@@ -16,16 +16,9 @@
     </div>
   </div>
 </div>  
-
-
-        
-    
-
     <% @allotment.offers.where(status: "active").each do |offer| %>
         <h1><%= offer.coupon %></h1>
         <%= link_to "Generar Cupón", offer_purchases_path(offer), method: :post %>
     <% end %>
-
-
 </div>
 
